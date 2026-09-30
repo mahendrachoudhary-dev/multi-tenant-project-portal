@@ -9,12 +9,12 @@ Built for the **Full Stack Engineering — MERN Stack Developer take-home assign
 | Submission detail | Value |
 | --- | --- |
 | Candidate | Mahendra Choudhary |
-| GitHub repository | Pending initial publication |
-| Live application | Pending Vercel deployment |
+| GitHub repository | https://github.com/mahendrachoudhary-dev/multi-tenant-project-portal |
+| Live application | https://multi-tenant-project-portal-4sea.vercel.app |
 | Demo email | `demo@portal.test` after seeding |
 | Demo password | To be supplied with the deployed assignment submission |
 
-> Publication status: the live URL and deployed demo credentials will be added after deployment verification. The seed script lets reviewers create the same demo locally using their own password.
+> Publication status: the live URL and deployed demo credentials are added after deployment verification. The seed script lets reviewers create the same demo locally using their own password.
 
 ## Contents
 
