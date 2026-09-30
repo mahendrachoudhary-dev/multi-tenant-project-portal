@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed": "node src/scripts/seed.js",
+    "test": "node --test tests/unit.test.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.0.0",
+    "zod": "^4.1.0",
+    "helmet": "^8.1.0",
+    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.7",
+    "express-rate-limit": "^8.1.0",
+    "dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}
