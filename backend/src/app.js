@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import { rateLimit } from "express-rate-limit";
 import { fileURLToPath } from "node:url";
 import mongoose from "mongoose";
+import { connectDB } from "./config/db.js";
 import { env } from "./config/env.js";
 import { router } from "./routes/index.js";
 import { ApiError } from "./utils/errors.js";
@@ -32,6 +33,20 @@ app.use("/api", (req, res, next) => {
       throw new ApiError(415, "Use application/json.");
   }
   next();
+});
+
+app.use("/api", async (req, res, next) => {
+  // Unit tests mock database operations.
+  if (env.NODE_ENV === "test") {
+    return next();
+  }
+
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
 });
 
 app.get("/api/health", (req, res) =>
@@ -64,3 +79,5 @@ if (env.SERVE_FRONTEND === "true") {
 }
 
 app.use(errorHandler);
+
+export default app;
